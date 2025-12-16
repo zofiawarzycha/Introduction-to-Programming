@@ -9,17 +9,25 @@ public class Sphere {
         setRadius(radius);
     }
 
-    // Access modifier: PUBLIC
-    // Why: Exposes the value of the private field safely.
+    /**
+     * Retrieves the radius of the sphere.
+     * Access modifier: PUBLIC
+     * Why: Exposes the value of the private field safely.
+     * @return radius
+     */
     public double getRadius() {
         return radius;
     }
 
-    // Access modifier: PUBLIC
-    // Why: Allows modifying the radius while enforcing validation rules (non-negative).
+    /**
+     * Sets the radius with validation.
+     * Access modifier: PUBLIC
+     * Why: Allows modifying the radius while enforcing validation rules (non-negative).
+     * @param radius the new radius
+     */
     public void setRadius(double radius) {
         if (radius < 0) {
-            System.out.println("Radius cannot be negative. Setting to 0.");
+            System.out.println("Error: Radius cannot be negative. Setting to 0.");
             this.radius = 0;
         } else {
             this.radius = radius;

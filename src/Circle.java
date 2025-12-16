@@ -10,18 +10,25 @@ public class Circle {
         setRadius(radius);
     }
 
-    // Access modifier: PUBLIC
-    // Why: We provide controlled read access to the private field.
+    /**
+     * Retrieves the current radius of the circle.
+     * Access modifier: PUBLIC
+     * Why: We provide controlled read access to the private field.
+     * @return radius
+     */
     public double getRadius() {
         return radius;
     }
 
-    // Access modifier: PUBLIC
-    // Why: We provide controlled write access. This method includes validation logic
-    // to ensure the object remains in a valid state.
+    /**
+     * Sets the radius with validation.
+     * Access modifier: PUBLIC
+     * Why: We provide controlled write access to ensure the object remains in a valid state.
+     * @param radius the new radius to set
+     */
     public void setRadius(double radius) {
         if (radius < 0) {
-            System.out.println("Radius cannot be negative. Setting to 0.");
+            System.out.println("Error: Radius cannot be negative. Setting to 0.");
             this.radius = 0;
         } else {
             this.radius = radius;
